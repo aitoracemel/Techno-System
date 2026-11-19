@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #050b18;
+    color: white;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.08;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.orden {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+    background-color: #050b18;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #168cff;
+}
+
+#contacte {
+    scroll-margin-top: 85px;
+}
+
+.contacte {
+    background-color: #051b4b;
+    color: white;
+    width: 100%;
+    padding: 2em 0;
+}
+
+.box6 {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto 1fr auto;
+
+    gap: 20px;
+
+    padding: 2em clamp(1em, 8vw, 8em);
+}
+
+.contacten-s {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 25px;
+}
+
+.contacten-s p {
+    margin-top: 15px;
+}
+
+.targ {
+    background-color: #09152F;
+    border: 1px solid #07516B;
+    border-radius: 0.5em;
+    padding: 1.5em;
+}
+
+.correo {
+    grid-column: 1;
+    grid-row: 2 / 4;
+}
+
+.correo h2,
+.direccion h2,
+.horario h2 {
+    color: white;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.correo form {
+    display: flex;
+    flex-direction: column;
+}
+
+.correo label {
+    margin-bottom: 8px;
+    color: white;
+}
+
+.correo input,
+.correo textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5em;
+
+    background-color: #06102A;
+    border: 1px solid #07516B;
+    border-radius: 0.5em;
+
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.correo textarea {
+    height: 130px;
+    resize: none;
+}
+
+.correo input:focus,
+.correo textarea:focus {
+    outline: none;
+    border-color: #168cff;
+}
+
+.correo button {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #211BD0;
+    color: white;
+
+    border: none;
+    border-radius: 0.5em;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.correo button:hover {
+    background-color: #168cff;
+}
+
+.direccion {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.email,
+.telefon,
+.direccio {
+    margin: 1.5em 0;
+}
+
+.direccion label {
+    color: #168cff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.direccion p {
+    color: #b5bdce;
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.horario {
+    grid-column: 2;
+    grid-row: 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.horario h2 {
+    grid-column: 1 / -1;
+}
+
+.dias {
+    grid-column: 1;
+}
+
+.horas {
+    grid-column: 2;
+    text-align: right;
+}
+
+.dias p,
+.horas p {
+    color: #b5bdce;
+    font-size: 13px;
+    margin: 0.8em 0;
+}
+
+@media (max-width: 768px) {
+
+    .box6 {
+        padding: 2em;
+        gap: 15px;
+    }
+
+    .correo,
+    .direccion,
+    .horario {
+        padding: 1.2em;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .menu {
+        gap: 15px;
+        padding: 18px 10px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .box6 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        padding: 1em;
+    }
+
+    .contacten-s {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 20px 5px;
+    }
+
+    .contacten-s h2 {
+        font-size: 25px;
+    }
+
+    .correo {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .direccion {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .horario {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+}

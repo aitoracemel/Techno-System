@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #050b18;
+    color: white;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.08;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.orden {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+    background-color: #050b18;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #168cff;
+}
+
+#inicio,
+#sobre-nosaltres,
+#serveis,
+#projectes,
+#contacte {
+    scroll-margin-top: 85px;
+}
+
+.hem-ajudat-a {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+
+    width: 100%;
+    padding: 3em 3.5em;
+    gap: 40px;
+}
+
+.titol-projectes {
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.titol-projectes h2 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.linea-projectes {
+    width: 60px;
+    height: 3px;
+    background-color: #009dff;
+}
+
+.targetas {
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    width: 100%;
+    align-items: stretch;
+}
+
+.targeta-f,
+.targeta-d,
+.targeta-g {
+    border-radius: 1em;
+    background-color: white;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    gap: 18px;
+
+    padding: 25px;
+    min-height: 260px;
+
+    transition: 0.3s;
+}
+
+.targeta-f:hover,
+.targeta-d:hover,
+.targeta-g:hover {
+    transform: translateY(-5px);
+}
+
+.img-logo {
+    height: 7em;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+
+    .targetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hem-ajudat-a {
+        padding: 2em;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .targetas {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        gap: 15px;
+        padding: 18px 10px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hem-ajudat-a {
+        padding: 1.5em 1em;
+        gap: 30px;
+    }
+
+    .titol-projectes h2 {
+        font-size: 25px;
+    }
+
+    .linea-projectes {
+        width: 35px;
+    }
+
+    .targeta-f,
+    .targeta-d,
+    .targeta-g {
+        min-height: 230px;
+    }
+
+}

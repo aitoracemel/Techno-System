@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #050b18;
+    color: white;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
+
+.btn-flecha {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    border: 2px solid #087bff;
+
+    background: transparent;
+    color: #087bff;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    transition: 0.3s;
+}
+
+.btn-flecha:hover {
+    background-color: #087bff;
+    color: white;
+    box-shadow: 0 0 15px #087bff;
+    transform: scale(1.1);
+}
+
+h1, h2, h3, p {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.08;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.orden {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+    background-color: #050b18;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #168cff;
+}
+
+#inicio,
+#sobre-nosaltres,
+#serveis,
+#projectes,
+#contacte {
+    scroll-margin-top: 85px;
+}
+
+.clase3 {
+    width: 100%;
+    padding: 3em 3.5em;
+}
+
+.box3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.ELS-NOSTRES-SERVEIS {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.targeta-ma,
+.targeta-xa,
+.targeta-pr,
+.targeta-seg,
+.targeta-ser,
+.targeta-pla {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    gap: 20px;
+
+    border-radius: 1em;
+    background-color: #070379ba;
+    border: 2px solid #3a75ec;
+    color: white;
+
+    padding: 30px 24px;
+    min-height: 180px;
+
+    transition: 0.3s;
+}
+
+.texto {
+    grid-column: 1;
+}
+
+.columna-flecha {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.targeta-ma:hover,
+.targeta-xa:hover,
+.targeta-pr:hover,
+.targeta-seg:hover,
+.targeta-ser:hover,
+.targeta-pla:hover {
+    transform: translateY(-5px);
+    border-color: #168cff;
+    background-color: #10108a;
+}
+
+@media (max-width: 768px) {
+
+    .box3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .clase3 {
+        padding: 2em;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .box3 {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        gap: 15px;
+        padding: 18px 10px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .clase3 {
+        padding: 1.5em 1em;
+    }
+
+    .ELS-NOSTRES-SERVEIS h2 {
+        font-size: 25px;
+    }
+
+}

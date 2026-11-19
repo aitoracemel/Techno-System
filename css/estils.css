@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fons: #050b19;
+    --text: #f5f7ff;
+    --blau: #00baff;
+    --text-secundari: #c9d9f2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--fons);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 54px;
+    padding: 25px 20px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 21px;
+    transition: color .2s ease;
+}
+
+nav a:hover {
+    color: var(--blau);
+}
+
+.titol-seccio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 88px 20px 105px;
+    text-align: center;
+}
+
+.titol-seccio span {
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: var(--blau);
+}
+
+.titol-seccio h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.contingut {
+    width: min(86%, 1600px);
+    margin: 0 auto 90px;
+    display: grid;
+    grid-template-columns: minmax(300px, .8fr) minmax(420px, 1.2fr);
+    gap: 8%;
+    align-items: start;
+}
+
+.intro {
+    border-left: 3px solid var(--blau);
+    padding: 12px 0 12px 30px;
+}
+
+.intro h2 {
+    font-size: clamp(30px, 3vw, 46px);
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.intro p {
+    color: var(--text-secundari);
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+.text-servei p {
+    color: var(--text-secundari);
+    font-size: 20px;
+    line-height: 1.95;
+    margin-bottom: 32px;
+    text-align: justify;
+}
+
+.text-servei h3 {
+    color: var(--text);
+    font-size: 25px;
+    margin: 38px 0 15px;
+}
+
+.text-servei ul {
+    margin: 0 0 30px 22px;
+    color: var(--text-secundari);
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+@media (max-width: 850px) {
+    nav {
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    .titol-seccio {
+        margin: 60px 15px;
+    }
+
+    .titol-seccio h1 {
+        font-size: 34px;
+    }
+
+    .titol-seccio span {
+        width: 40px;
+    }
+
+    .contingut {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .intro p,
+    .text-servei p {
+        font-size: 18px;
+    }
+}
